@@ -1,0 +1,21 @@
+{
+  "name": "travian-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn start.ts",
+    "start": "ts-node start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "puppeteer": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^5.4.3",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6"
+  }
+}
