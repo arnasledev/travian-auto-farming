@@ -140,9 +140,7 @@ const startFarming = async (page) => {
 };
 
 const startBrowser = async () => {
-  puppeteer.launch({ args: ['--no-sandbox'] });
-
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: false, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
   const page = await browser.newPage();
   await page.setViewport({ width: 1200, height: 3000 });
 
