@@ -122,7 +122,7 @@ const loopFarmingList = (page, farmsList) =>
           console.log(`++++++++++++ Raiding farm list`, validFarmName);
 
           const button = await farmList.$(MATCHING_PATTERNS.raidButton);
-          await button.click(); // does not work because we need to scroll there
+          //   await button.click(); // does not work because we need to scroll there
         }
 
         await updateFarmsList(farmFoundOnTheList);
@@ -140,6 +140,8 @@ const startFarming = async (page) => {
 };
 
 const startBrowser = async () => {
+  puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   await page.setViewport({ width: 1200, height: 3000 });
