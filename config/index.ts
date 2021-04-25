@@ -1,8 +1,7 @@
 export const { AUTH_NAME, AUTH_PASSWORD } = process.env;
 export const PAGES = {
-  login: "https://tse.x2.international.travian.com/login.php",
-  farmList:
-    "https://tse.x2.international.travian.com/build.php?id=39&gid=16&tt=99",
+  login: 'https://tse.x2.international.travian.com/login.php',
+  farmList: 'https://tse.x2.international.travian.com/build.php?id=39&gid=16&tt=99',
 };
 
 export const SELECTORS = {
@@ -11,20 +10,21 @@ export const SELECTORS = {
       name: 'input[name="name"]',
       password: 'input[name="password"]',
     },
-    button: "#s1",
+    button: '#s1',
   },
   popup: {
-    parent: "#cmpbox",
-    button: "#cmpbntyestxt",
+    parent: '#cmpbox',
+    button: '#cmpbntyestxt',
   },
   rallyPoint: {
-    raidList: ".raidList",
+    raidList: '.raidList',
   },
 };
 
 export const MATCHING_PATTERNS = {
-  farmsNaming: "running.farms",
+  farmsNaming: 'running.farms',
   expandButton: "div[class='expandCollapse  collapsed']",
+  raidButton: "button[class='textButtonV1 green startButton']",
 };
 
-export const ACCEPTED_RAID_RESULTS = ["iReport1", "iReport2"];
+export const ACCEPTED_RAID_RESULTS = ['iReport1', 'iReport2'];
