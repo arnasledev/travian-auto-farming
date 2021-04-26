@@ -8,10 +8,10 @@ const TIMERS = {
     {
       name: 'running.farms 01',
       lastRaid: null,
-      timeoutBetweenRaids: 60000 * 20, // 20 minutes
+      timeoutBetweenRaids: 60000 * 10, // 20 minutes
       timeRange: {
-        from: 60000 * 20, // 20 minutes
-        to: 60000 * 23,
+        from: 60000 * 10, // 20 minutes
+        to: 60000 * 13,
       },
     },
     // {
