@@ -122,7 +122,7 @@ const loopFarmingList = (page, farmsList) =>
           console.log(`++++++++++++ Raiding farm list`, validFarmName);
 
           const button = await farmList.$(MATCHING_PATTERNS.raidButton);
-          //   await button.click(); // does not work because we need to scroll there
+          await button.click(); // does not work because we need to scroll there
         }
 
         await updateFarmsList(farmFoundOnTheList);
