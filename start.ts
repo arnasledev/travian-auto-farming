@@ -14,15 +14,6 @@ const TIMERS = {
         to: 60000 * 13,
       },
     },
-    // {
-    //   name: 'test.farms 01',
-    //   lastRaid: null,
-    //   timeoutBetweenRaids: 60000,
-    //   timeRange: {
-    //     from: 10000,
-    //     to: 15000,
-    //   },
-    // },
   ],
 };
 
@@ -144,11 +135,17 @@ const startBrowser = async () => {
   const page = await browser.newPage();
   await page.setViewport({ width: 1200, height: 3000 });
 
-  await login(page);
-  await acceptCookies(page);
-  await startFarming(page);
+  try {
+    await login(page);
+    await acceptCookies(page);
+    await startFarming(page);
+  } catch (error) {
+    console.error('An error while running bot');
+    console.error(error);
 
-  await browser.close();
+    await browser.close();
+    return startBrowser();
+  }
 };
 
 const launch = async () => {

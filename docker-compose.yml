@@ -1,0 +1,18 @@
+# Example of docker-based Database Server.
+# Start using: docker-compose up -d
+# Stop using: docker-compose down
+version: '3'
+services:
+  mysql:
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - ./.db:/var/lib/mysql
+    ports:
+      - 6603:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: konkurenta
+      MYSQL_DATABASE: travian_bot
+    logging:
+      driver: none

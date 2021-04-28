@@ -1,8 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "module": "commonjs",
-    "outDir": "out",
-    "sourceMap": true
-  }
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "#*": ["src/*"]
+    },
+    "incremental": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "dist"]
 }
