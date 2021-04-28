@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import * as puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer';
 
 import { AUTH_NAME, AUTH_PASSWORD, PAGES, SELECTORS, MATCHING_PATTERNS, ACCEPTED_RAID_RESULTS } from './config';
 
