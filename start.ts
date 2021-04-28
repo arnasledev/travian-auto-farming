@@ -139,6 +139,7 @@ const startBrowser = async () => {
     await login(page);
     await acceptCookies(page);
     await startFarming(page);
+    await browser.close();
   } catch (error) {
     console.error('An error while running bot');
     console.error(error);
